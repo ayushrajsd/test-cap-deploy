@@ -11,7 +11,9 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
-const clientBuildPath = path.join(__dirname, "../client/build");
+// const clientBuildPath = path.join(__dirname, "../client/build");
+const clientBuildPath = path.join(process.cwd(), "../client/build");
+
 console.log(clientBuildPath);
 
 app.use(express.static(clientBuildPath));
